@@ -10,7 +10,6 @@ window.applicationCache.addEventListener('updateready', function(){
 window.applicationCache.addEventListener('noupdate', function(){
 	console.log("AppCache: No updates."); 
 }, false);
-} else { top.location.replace('http://blog.acrylicstyle.com/'), 1 );
 }
 
 if (window.location.protocol == "https:" && 'serviceWorker' in navigator) {

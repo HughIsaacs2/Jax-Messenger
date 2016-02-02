@@ -16,6 +16,7 @@ favicon.ico
 logo.png
 logo.svg
 js/browser-matrix-0.3.0.min.js
+js/favico.js
 js/script.js
 css/style.css
 data/

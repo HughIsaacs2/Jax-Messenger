@@ -4,15 +4,16 @@ importScripts('/js/serviceworker-cache-polyfill.js');
 
 var CACHE_NAME = 'sw-cache-v1';
 var urlsToCache = [
-  '/index.html',
-  '/favicon.ico',
-  '/logo.png',
-  '/logo.svg',
-  '/js/browser-matrix-0.3.0.min.js',
-  '/js/script.js',
-  '/css/style.css',
-  '/data/',
-  '/data/index.html'
+  'index.html',
+  'favicon.ico',
+  'logo.png',
+  'logo.svg',
+  'js/browser-matrix-0.3.0.min.js',
+  'js/favico.js',
+  'js/script.js',
+  'css/style.css',
+  'data/',
+  'data/index.html'
 ];
 
 self.addEventListener('install', function(event) {
