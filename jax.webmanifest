@@ -32,10 +32,6 @@
       "type": "image/svg+xml"
     }
   ],
-  "related_applications": [{
-      "platform": "web"
-  }],
-  "prefer_related_applications": "false",
   "theme_color": "#008080",
   "background_color": "#008080"
 }

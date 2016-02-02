@@ -32,7 +32,6 @@ window.applicationCache.addEventListener('updateready', function(){
 window.applicationCache.addEventListener('noupdate', function(){
 	console.log("AppCache: No updates."); 
 }, false);
-} 
 }
 
 if (window.location.protocol == "https:" && 'serviceWorker' in navigator) {
