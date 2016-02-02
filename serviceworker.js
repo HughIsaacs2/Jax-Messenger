@@ -1,4 +1,4 @@
-importScripts('/js/serviceworker-cache-polyfill.js');
+importScripts('js/serviceworker-cache-polyfill.js');
 
 /* v0.0.1 */
 
