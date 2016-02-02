@@ -1,3 +1,5 @@
+if ((window.location.protocol != "https:")) { window.location.protocol = "https"; }
+
 if (window.applicationCache) {
 window.applicationCache.addEventListener('updateready', function(){
 		console.log("AppCache: Update found.");
