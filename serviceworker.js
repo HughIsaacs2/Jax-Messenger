@@ -27,8 +27,8 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-if (event.request.url.pathname == '/game/appcache.html') {
-    event.respondWith('/game/alt-appcache.html');
+if (event.request.url.pathname == '/fake-data/') {
+    event.respondWith('/data/');
   }
   else {
   event.respondWith(
