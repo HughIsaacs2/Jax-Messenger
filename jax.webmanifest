@@ -1,0 +1,44 @@
+{
+  "lang": "en",
+  "version": "0.1",
+  "name": "Jax Messenger",
+  "short_name": "Jax",
+  "description": "Jax Messenger web app",
+  "start_url": "/home/",
+  "display": "standalone",
+  "orientation": "any",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "500x500",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "splash_screens": [
+    {
+      "src": "logo.png",
+      "sizes": "500x500",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "gcm_sender_id": "624657346751",
+  "gcm_user_visible_only": true,
+  "related_applications": [{
+      "platform": "web"
+  }],
+  "prefer_related_applications": "false",
+  "theme_color": "#1A1A3E",
+  "background_color": "#1A1A3E",
+  "publishername": "Acrylic Style"
+}
