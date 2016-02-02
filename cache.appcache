@@ -11,6 +11,7 @@ https://connect.facebook.net/en_US/all.js
 *
 
 CACHE:
+<<<<<<< HEAD
 /index.html
 /favicon.ico
 /logo.png
@@ -23,3 +24,17 @@ CACHE:
 
 FALLBACK:
 / /index.html
+=======
+index.html
+favicon.ico
+logo.png
+logo.svg
+js/browser-matrix-0.3.0.min.js
+js/favico.js
+js/script.js
+css/style.css
+data/
+
+FALLBACK:
+#blahblahblah
+>>>>>>> refs/remotes/origin/gh-pages

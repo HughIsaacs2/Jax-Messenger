@@ -32,6 +32,7 @@
       "type": "image/svg+xml"
     }
   ],
+<<<<<<< HEAD
   "gcm_sender_id": "624657346751",
   "gcm_user_visible_only": true,
   "related_applications": [{
@@ -41,4 +42,8 @@
   "theme_color": "#1A1A3E",
   "background_color": "#1A1A3E",
   "publishername": "Acrylic Style"
+=======
+  "theme_color": "#008080",
+  "background_color": "#008080"
+>>>>>>> refs/remotes/origin/gh-pages
 }

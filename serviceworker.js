@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 importScripts('/js/serviceworker-cache-polyfill.js');
 
 /* v0.0.1 */
@@ -13,6 +14,23 @@ var urlsToCache = [
   '/css/style.css',
   '/data/',
   '/data/index.html'
+=======
+importScripts('js/serviceworker-cache-polyfill.js');
+
+/* v0.0.2 */
+
+var CACHE_NAME = 'sw-cache-v1';
+var urlsToCache = [
+  'index.html',
+  'favicon.ico',
+  'logo.png',
+  'logo.svg',
+  'js/browser-matrix-0.3.0.min.js',
+  'js/favico.js',
+  'js/script.js',
+  'css/style.css',
+  'data/'
+>>>>>>> refs/remotes/origin/gh-pages
 ];
 
 self.addEventListener('install', function(event) {
@@ -27,8 +45,13 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
+<<<<<<< HEAD
 if (event.request.url.pathname == '/game/appcache.html') {
     event.respondWith('/game/alt-appcache.html');
+=======
+if (event.request.url.pathname == '/fake-data/') {
+    event.respondWith('/data/');
+>>>>>>> refs/remotes/origin/gh-pages
   }
   else {
   event.respondWith(
