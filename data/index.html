@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="../cache.appcache">
+<html manifest="/Jax-Messenger/cache.appcache">
 <head>
 <script type="text/javascript">
 if (window.applicationCache) {
@@ -23,7 +23,7 @@ if (window == window.top) {
 }
 
 if (window.location.protocol == "https:" && 'serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
+  navigator.serviceWorker.register('/Jax-Messenger/serviceworker.js').then(function(registration) {
     // Registration was successful
     console.log('ServiceWorker registration successful with scope: ',    registration.scope);
   }).catch(function(err) {

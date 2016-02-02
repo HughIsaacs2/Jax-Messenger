@@ -13,7 +13,7 @@ window.applicationCache.addEventListener('noupdate', function(){
 }
 
 if (window.location.protocol == "https:" && 'serviceWorker' in navigator) {
-  navigator.serviceWorker.register('../serviceworker.js').then(function(registration) {
+  navigator.serviceWorker.register('/Jax-Messenger/serviceworker.js').then(function(registration) {
     // Registration was successful
     console.log('ServiceWorker registration successful with scope: ',    registration.scope);
   }).catch(function(err) {
@@ -35,7 +35,7 @@ window.applicationCache.addEventListener('noupdate', function(){
 }
 
 if (window.location.protocol == "https:" && 'serviceWorker' in navigator) {
-  navigator.serviceWorker.register('../serviceworker.js').then(function(registration) {
+  navigator.serviceWorker.register('/Jax-Messenger/serviceworker.js').then(function(registration) {
     // Registration was successful
     console.log('ServiceWorker registration successful with scope: ',    registration.scope);
   }).catch(function(err) {

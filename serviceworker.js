@@ -12,8 +12,7 @@ var urlsToCache = [
   'js/favico.js',
   'js/script.js',
   'css/style.css',
-  'data/',
-  'data/index.html'
+  'data/'
 ];
 
 self.addEventListener('install', function(event) {
