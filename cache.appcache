@@ -36,5 +36,9 @@ css/style.css
 data/
 
 FALLBACK:
+<<<<<<< HEAD
 #blahblahblah
+>>>>>>> refs/remotes/origin/gh-pages
+=======
+#blahblah
 >>>>>>> refs/remotes/origin/gh-pages
