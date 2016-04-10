@@ -1,0 +1,64 @@
+@font-face {
+  font-family: emoji;
+
+  /* Fonts for text outside emoji blocks */
+  src: local('Droid Sans Mono'),
+       local('Lucida Console'),
+       local('Arial Monospaced'),
+       local(Arial);
+}
+@font-face {
+  font-family: emoji;
+
+  src: local('Apple Color Emoji'),
+       local('Android Emoji'),
+       local('Segoe UI'),
+	   local('Segoe UI Symbol'),
+       local(EmojiSymbols),
+       local(Symbola)/*,
+       url('fonts/Symbola-Emoji.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Symbola-Emoji.woff') format('woff'),
+       url('fonts/Symbola-Emoji.ttf') format('truetype')*/;
+
+  /* Emoji unicode blocks */
+  unicode-range: U+1F300-1F5FF, U+1F600-1F64F, U+1F680-1F6FF, U+2600-26FF;
+}
+
+html {
+font-size: 100%;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+-webkit-overflow-scrolling: touch;
+-ms-overflow-style: scrollbar;
+}
+
+html, body {
+width: 100%;
+height: 100%;
+}
+
+body {
+display: block;
+margin: 0;
+padding: 0;
+outline: none;
+border: none;
+width: 100%;
+height: auto;
+min-height: 100%;
+color: #ffffff;
+background-color: #008080;
+text-align: center;
+font-size: 110%;
+-webkit-text-size-adjust: none;
+-ms-text-size-adjust: none;
+overflow: auto;
+overflow-y: scroll;
+overflow-x: hidden;
+-ms-overflow-style: scrollbar;
+-webkit-overflow-scrolling: touch;
+scroll-behavior: smooth;
+font-family: Lucida Sans, Lucida Grande, Lucida Sans Unicode, HelveticaNeue-Light, HelveticaNeue, Helvetica, Arial, sans-serif, Segoe UI, 'Segoe UI Symbol', 'emoji';
+background-attachment: fixed;
+z-index: -1;
+}

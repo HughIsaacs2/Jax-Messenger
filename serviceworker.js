@@ -1,14 +1,12 @@
-importScripts('js/serviceworker-cache-polyfill.js');
-
-/* v0.0.1 */
-
-var CACHE_NAME = 'sw-cache-v1';
+var appVersion = '0.0.1';
+var CACHE_NAME = 'sw-cache-' + appVersion;
 var urlsToCache = [
   'index.html',
   'favicon.ico',
   'logo.png',
   'logo.svg',
-  'js/browser-matrix-0.3.0.min.js',
+  'js/browser-matrix-0.5.1.min.js',
+  'js/adapter.screenshare.min.js',
   'js/favico.js',
   'js/script.js',
   'css/style.css',
@@ -27,10 +25,6 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-if (event.request.url.pathname == '/fake-data/') {
-    event.respondWith('/data/');
-  }
-  else {
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
@@ -69,12 +63,10 @@ if (event.request.url.pathname == '/fake-data/') {
         );
       })
     );
-	}
 });
 
-self.addEventListener('activate', function(event) {
-
-  var cacheWhitelist = ['sw-cache-v1'];
+function refreshCache() {
+  var cacheWhitelist = [CACHE_NAME];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
@@ -87,4 +79,19 @@ self.addEventListener('activate', function(event) {
       );
     })
   );
+  
+  // Calling claim() to force a "controllerchange" event on navigator.serviceWorker
+  event.waitUntil(self.clients.claim());
+}
+
+self.addEventListener('activate', function(event) {
+refreshCache();
+});
+
+self.addEventListener('sync', function(event) {
+
+  if (event.tag == 'refreshCache') {
+    event.waitUntil(refreshCache());
+  }
+
 });
