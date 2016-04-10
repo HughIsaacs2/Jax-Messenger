@@ -5,12 +5,12 @@ var urlsToCache = [
   'favicon.ico',
   'logo.png',
   'logo.svg',
-  'js/browser-matrix-0.5.1.min.js',
-  'js/adapter.screenshare.min.js',
-  'js/favico.js',
-  'js/script.js',
-  'css/style.css',
-  'data/'
+  'browser-matrix-0.5.1.min.js',
+  'adapter.screenshare.min.js',
+  'favico.js',
+  'script.js',
+  'style.css',
+  'data.html'
 ];
 
 self.addEventListener('install', function(event) {
