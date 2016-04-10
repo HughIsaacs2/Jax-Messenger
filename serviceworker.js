@@ -1,4 +1,4 @@
-var appVersion = '0.0.1';
+var appVersion = '0.0.1 1';
 var CACHE_NAME = 'sw-cache-' + appVersion;
 var urlsToCache = [
   'index.html',
@@ -65,7 +65,7 @@ self.addEventListener('fetch', function(event) {
     );
 });
 
-function refreshCache() {
+self.addEventListener('activate', function(event) {
   var cacheWhitelist = [CACHE_NAME];
 
   event.waitUntil(
@@ -82,16 +82,29 @@ function refreshCache() {
   
   // Calling claim() to force a "controllerchange" event on navigator.serviceWorker
   event.waitUntil(self.clients.claim());
-}
-
-self.addEventListener('activate', function(event) {
-refreshCache();
 });
 
 self.addEventListener('sync', function(event) {
 
   if (event.tag == 'refreshCache') {
-    event.waitUntil(refreshCache());
+    event.waitUntil(function(){
+	  var cacheWhitelist = [CACHE_NAME];
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+  
+  // Calling claim() to force a "controllerchange" event on navigator.serviceWorker
+  event.waitUntil(self.clients.claim());
+	});
   }
 
 });
