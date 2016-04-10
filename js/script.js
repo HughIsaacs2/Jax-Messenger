@@ -78,7 +78,7 @@ if ('serviceWorker' in navigator && 'SyncManager' in window) {
 
 console.log("Loading browser sdk");
 
-var client = matrixcs.createClient("http://matrix.org");
+var client = matrixcs.createClient("https://matrix.org");
 client.publicRooms(function (err, data) {
     if (err) {
 	   console.error("err %s", JSON.stringify(err));
