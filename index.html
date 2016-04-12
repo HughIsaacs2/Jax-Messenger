@@ -108,10 +108,6 @@
 <meta content='progid:DXImageTransform.Microsoft.Fade(Duration=1)' http-equiv='Page-Exit'/>
 <![endif]-->
 
-<script src="adapter.screenshare.min.js" type="text/javascript" language="Javascript"></script>
-<script src="browser-matrix-0.5.1.min.js" type="text/javascript" language="Javascript"></script>
-<script src="favico.js" type="text/javascript" language="Javascript"></script>
-<script src="script.js" async="async" defer="true" type="text/javascript" language="Javascript"></script>
 <link href="style.css" rel="stylesheet" type="text/css" defer="true" />
 </head>
 <!--[if lt IE 7]>  <body class="lt-ie11 lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -126,8 +122,17 @@
 <div id="universe">
 <main id="main" role="main"><header><h1>Jax Messenger</h1></header>
 <article role="article">
+
+<input id="USER_ID" type="text" placeholder="User ID" title="User ID" /><br/>
+<input id="ROOM_ID" type="text" placeholder="Room ID" title="Room ID" /><br/>
+<input id="PASSWORD" type="password" placeholder="Password" title="Password" /><br/>
+<input id="BASE_URL" type="url" placeholder="Base URL" title="Base URL" value="https://matrix.org" /><br/>
+<input id="ID_SERVER_URL" type="url" placeholder="Identity Server URL" title="Identity Server URL" value="https://matrix.org" /><br/>
+<button id="signin" title="Sign in" class="button">Sign In</button><br/><br/>
+
 <div id="result">
 </div>
+
 </article>
 <footer role="contentinfo">
 <span id="upgrade"><noscript><br/>For the best experience, enable JavaScript. Here are <a href='//www.enable-javascript.com/' target='_blank'>the instructions on how to enable JavaScript in your web browser</a>.</noscript><!--[if lt IE 9]><br/>Upgrade to <a href="//browsehappy.com/">a better web browser</a> for an improved experience.<br/><![endif]--></span>
@@ -139,5 +144,9 @@
 <a rel="entry-content" href="#widget/?platform=webSlice" tabindex="-1">&nbsp;</a>
 </div>
 <iframe id="cache" src="data.html" defer="true" width="0" height="0" frameborder="0" scrolling="no" allowtransparency="true" style="position: fixed; left: 1000%; bottom: 1000%; width: 0; height: 0; border: 0; outline: 0; overflow: hidden;" target="_self" tabindex="-1" role="hidden" lazyload="1"></iframe>
+<script src="adapter.screenshare.min.js" type="text/javascript" language="Javascript"></script>
+<script src="browser-matrix-0.5.1.min.js" type="text/javascript" language="Javascript"></script>
+<script src="favico.js" type="text/javascript" language="Javascript"></script>
+<script src="script.js" async="async" defer="true" type="text/javascript" language="Javascript"></script>
 </body>
 </html>

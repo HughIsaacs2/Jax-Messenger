@@ -2,6 +2,14 @@
 document.documentElement.className=document.documentElement.className.replace("no-js","js");
 window.scrollTo(0, 1);
 
+console.log("Loading browser sdk");
+var BASE_URL = "";
+var ID_SERVER_URL = "";
+var TOKEN = "";
+var USER_ID = "";
+var ROOM_ID = "";
+var matrixClient = "";
+
 if (!String.prototype.endsWith) {
   String.prototype.endsWith = function(searchString, position) {
       var subjectString = this.toString();
@@ -21,7 +29,7 @@ if (!String.prototype.startsWith) {
   };
 }
 
-if (window.location.protocol != "https:") {window.location.protocol = "https:";}
+//if (window.location.protocol != "https:") {window.location.protocol = "https:";}
 
 if (window.applicationCache) {
 window.applicationCache.addEventListener('updateready', function(){
@@ -89,3 +97,28 @@ client.publicRooms(function (err, data) {
     var result = document.getElementById("result");
     result.innerHTML = "<p>The SDK appears to be working correctly.</p>";
 });
+
+function signin() {
+
+matrixClient.getAccessToken();
+
+}
+
+function startEverything(){
+
+BASE_URL = document.getElementById("BASE_URL").value;
+ID_SERVER_URL = document.getElementById("ID_SERVER_URL").value;
+TOKEN = "";
+USER_ID = document.getElementById("USER_ID").value;
+ROOM_ID = document.getElementById("ROOM_ID").value;
+
+
+var matrixClient = matrixcs.createClient({
+    baseUrl: BASE_URL
+});
+
+matrixClient.loginWithPassword(USER_ID, document.getElementById("PASSWORD").value, signin);
+
+}
+
+document.getElementById('signin').addEventListener('click', startEverything(),false);
