@@ -4,7 +4,7 @@
   "name": "Jax Messenger",
   "short_name": "Jax",
   "description": "Jax Messenger web app",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "orientation": "any",
   "scope": "/",

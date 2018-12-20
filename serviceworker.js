@@ -9,7 +9,8 @@ var urlsToCache = [
   'favico.js',
   'script.js',
   'style.css',
-  'data.html'
+  'data.html',
+  'jax.webmanifest'
 ];
 
 self.addEventListener('install', function(event) {
@@ -21,9 +22,16 @@ self.addEventListener('install', function(event) {
         return cache.addAll(urlsToCache);
       })
   );
+  if (event.registerForeignFetch) {
+  event.registerForeignFetch({
+    scopes: [self.registration.scope],
+    origins: ['*']
+  });
+  }
 });
 
 self.addEventListener('fetch', function(event) {
+
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
@@ -61,10 +69,22 @@ self.addEventListener('fetch', function(event) {
           }
         );
       })
-    );
+  );
+});
+
+self.addEventListener('foreignfetch', event => {
+  // The new Request will have credentials omitted by default.
+  const noCredentialsRequest = new Request(event.request.url);
+  event.respondWith(
+    // Replace with your own request logic as appropriate.
+    fetch(noCredentialsRequest)
+      .catch(() => caches.match(noCredentialsRequest))
+      .then(response => ({response}))
+  );
 });
 
 self.addEventListener('activate', function(event) {
+
   var cacheWhitelist = [CACHE_NAME];
 
   event.waitUntil(
