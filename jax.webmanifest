@@ -4,22 +4,22 @@
   "name": "Jax Messenger",
   "short_name": "Jax",
   "description": "Jax Messenger web app",
-  "start_url": "/home/",
+  "start_url": "/index.html",
   "display": "standalone",
   "orientation": "any",
   "scope": "/",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "/logo.png",
       "sizes": "500x500",
       "type": "image/png"
     },
     {
-      "src": "logo.svg",
+      "src": "/logo.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
-  ]
+  ],
   "theme_color": "#008080",
   "background_color": "#008080"
 }
