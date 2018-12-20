@@ -19,31 +19,7 @@
       "sizes": "any",
       "type": "image/svg+xml"
     }
-  ],
-  "splash_screens": [
-    {
-      "src": "logo.png",
-      "sizes": "500x500",
-      "type": "image/png"
-    },
-    {
-      "src": "logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
-    }
-  ],
-<<<<<<< HEAD
-  "gcm_sender_id": "624657346751",
-  "gcm_user_visible_only": true,
-  "related_applications": [{
-      "platform": "web"
-  }],
-  "prefer_related_applications": "false",
-  "theme_color": "#1A1A3E",
-  "background_color": "#1A1A3E",
-  "publishername": "Acrylic Style"
-=======
+  ]
   "theme_color": "#008080",
   "background_color": "#008080"
->>>>>>> refs/remotes/origin/gh-pages
 }
