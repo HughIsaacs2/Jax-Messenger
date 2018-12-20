@@ -57,4 +57,29 @@ if ('serviceWorker' in navigator && 'SyncManager' in window) {
 </script>
 </head>
 <body></body>
-</html>
+<!DOCTYPE html>
+<html manifest="/appcache/">
+<html manifest="/Jax-Messenger/cache.appcache">
+<head>
+<script type="text/javascript">
+if (window.applicationCache) {
+window.applicationCache.addEventListener('updateready', function(){
+		console.log("AppCache: Update found.");
+		window.applicationCache.swapCache();
+		window.location.reload(true);
+}, false);
+window.applicationCache.addEventListener('updateready', function(){
+		console.log("AppCache: Updating.");
+}, false);
+window.applicationCache.addEventListener('noupdate', function(){
+	if (window == window.top) {
+	window.onload = setTimeout( top.location.replace('http://blog.acrylicstyle.com/'), 1 );
+	} else { console.log("AppCache: No updates."); }
+}, false);
+} else {
+if (window == window.top) {
+	window.onload = setTimeout( top.location.replace('http://blog.acrylicstyle.com/'), 1 );
+	}
+}
+
+if (window.location.protocol == "https:" && 'serviceWorker' in navigator) {
