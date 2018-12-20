@@ -5,10 +5,7 @@
 	"manifest_version": 2,
 	"version": "0.0.1",
 	"version_name": "0.0.1",
-	"permissions": ["nativeMessaging"],
 	"optional_permissions": [ "storage", "notifications", "background" ],
-	"externally_connectable": { "ids": [ "pgdnnmekclkafnpfofleebhhnmolopgl" ] },
-	"omnibox": { "keyword" : "Jax" },
 	"web_accessible_resources": [
 		"browser-matrix.min.js"
 	],
