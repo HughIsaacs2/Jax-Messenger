@@ -1,12 +1,11 @@
-var appVersion = '0.0.1 2';
+var appVersion = '0.0.1';
 var CACHE_NAME = 'sw-cache-' + appVersion;
 var urlsToCache = [
   'index.html',
   'favicon.ico',
   'logo.png',
   'logo.svg',
-  'browser-matrix-0.5.1.min.js',
-  'adapter.screenshare.min.js',
+  'browser-matrix.min.js',
   'favico.js',
   'script.js',
   'style.css',

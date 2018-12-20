@@ -1,13 +1,7 @@
 CACHE MANIFEST
-# AppCache v0.0.1 2
+# AppCache v0.0.1
 
 NETWORK:
-http://www.google-analytics.com/analytics.js
-https://www.google-analytics.com/analytics.js
-http://apis.google.com/js/client:plusone.js?publisherid=111702163060439028068&onload=gapiIsLoaded
-https://apis.google.com/js/client:plusone.js?publisherid=111702163060439028068&onload=gapiIsLoaded
-http://connect.facebook.net/en_US/all.js
-https://connect.facebook.net/en_US/all.js
 *
 
 CACHE:
@@ -15,8 +9,7 @@ index.html
 favicon.ico
 logo.png
 logo.svg
-browser-matrix-0.5.1.min.js
-adapter.screenshare.min.js
+browser-matrix.min.js
 favico.js
 script.js
 style.css
