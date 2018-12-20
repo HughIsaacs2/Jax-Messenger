@@ -94,10 +94,9 @@
 <meta name="msapplication-tap-highlight" content="no" />
 
 <meta content="name=Main;action-uri=/#;icon-uri=/favicon.ico" name="msapplication-task" />
-<script type="text/javascript">if ("applicationCache" in window){window.applicationCache.addEventListener('updateready', function(){window.applicationCache.swapCache();window.location.reload(true);}, false);}</script>
-<!--
-<script src="js/modernizr-custom.js" id="modernizr" type="text/javascript" language="Javascript"></script>
--->
+<script type="text/javascript">if ("applicationCache" in window){window.applicationCache.addEventListener('updateready', function(){window.applicationCache.swapCache();window.location.reload(true);}, false);}
+if (window.location.protocol == "http:" && 'serviceWorker' in navigator) {location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+</script>
 <!--[if lt IE 9 ]>
 <script src="html5shiv-printshiv.min.js" type="text/javascript"></script>
 <meta content="false" http-equiv="imagetoolbar" />

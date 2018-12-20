@@ -10,17 +10,17 @@
   "scope": "/",
   "icons": [
     {
-      "src": "/logo.png",
+      "src": "logo.png",
       "sizes": "500x500",
       "type": "image/png"
     },
     {
-      "src": "/logo.svg",
+      "src": "logo.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     },
     {
-      "src": "/logo.svg",
+      "src": "logo.svg",
       "sizes": "any",
       "type": "image/svg"
     }
