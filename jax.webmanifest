@@ -1,5 +1,6 @@
 {
   "lang": "en",
+  "dir": "ltr",
   "version": "0.0.1",
   "name": "Jax Messenger",
   "short_name": "Jax",
@@ -26,5 +27,10 @@
     }
   ],
   "theme_color": "#008080",
-  "background_color": "#008080"
+  "background_color": "#013131",
+  "serviceworker": {
+    "src": "/serviceworker.js",
+    "scope": "/",
+    "use_cache": true
+  }
 }
