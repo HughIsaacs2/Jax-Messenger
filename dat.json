@@ -1,0 +1,52 @@
+{
+  "name": "Jax Messenger",
+  "title": "Jax Messenger",
+  "description": "Jax Messenger",
+  "type": ["website", "web app"],
+  "web_root": "/",
+  "fallback_page": "/",
+  "content_security_policy": "upgrade-insecure-requests; default-src https: dat: data: 'unsafe-inline'",
+  "author": {
+    "name": "Lucid00",
+    "email": "HughIsaacs@AcrylicStyle.com",
+    "web": "https://Lucid00.com/"
+  },
+  "links": {
+    "payment": [
+      {
+        "href": "/",
+        "type": "text/html"
+      }
+    ],
+    "icon": [
+      {
+        "href": "logo.svg",
+        "type": "image/svg",
+        "sizes": "any",
+        "lazyload": "1"
+      }
+    ]
+    "manifest": [
+      {
+        "href": "/jax.webmanifest"
+      }
+    ],
+    "serviceworker": [
+      {
+        "href": "/serviceworker.js",
+        "scope": "/"
+      }
+    ],
+    "preload": [
+      {
+        "href": "/logo.svg",
+        "as": "image"
+      }
+    ],
+    "subresource": [
+      {
+        "href": "/serviceworker.js"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+ "title": "Jax Messenger",
+ "description": "Jax Messenger",
+ "background-color": "#008080",
+ "background-color-dark": "#008080",
+ "favicon": "favicon.ico",
+ "viewport": "width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no, viewport-fit=cover",
+ "cloneable": false
+}

@@ -1,36 +1,15 @@
-<<<<<<< HEAD
-importScripts('/js/serviceworker-cache-polyfill.js');
-
-/* v0.0.1 */
-
-var CACHE_NAME = 'sw-cache-v1';
-var urlsToCache = [
-  '/index.html',
-  '/favicon.ico',
-  '/logo.png',
-  '/logo.svg',
-  '/js/browser-matrix-0.3.0.min.js',
-  '/js/script.js',
-  '/css/style.css',
-  '/data/',
-  '/data/index.html'
-=======
-importScripts('js/serviceworker-cache-polyfill.js');
-
-/* v0.0.1 */
-
-var CACHE_NAME = 'sw-cache-v1';
+var appVersion = '0.0.1';
+var CACHE_NAME = 'sw-cache-' + appVersion;
 var urlsToCache = [
   'index.html',
   'favicon.ico',
   'logo.png',
   'logo.svg',
-  'js/browser-matrix-0.3.0.min.js',
-  'js/favico.js',
-  'js/script.js',
-  'css/style.css',
-  'data/'
->>>>>>> refs/remotes/origin/gh-pages
+  'browser-matrix.min.js',
+  'favico.js',
+  'script.js',
+  'style.css',
+  'data.html'
 ];
 
 self.addEventListener('install', function(event) {
@@ -45,15 +24,6 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-<<<<<<< HEAD
-if (event.request.url.pathname == '/game/appcache.html') {
-    event.respondWith('/game/alt-appcache.html');
-=======
-if (event.request.url.pathname == '/fake-data/') {
-    event.respondWith('/data/');
->>>>>>> refs/remotes/origin/gh-pages
-  }
-  else {
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
@@ -92,12 +62,10 @@ if (event.request.url.pathname == '/fake-data/') {
         );
       })
     );
-	}
 });
 
 self.addEventListener('activate', function(event) {
-
-  var cacheWhitelist = ['sw-cache-v1'];
+  var cacheWhitelist = [CACHE_NAME];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
@@ -110,4 +78,32 @@ self.addEventListener('activate', function(event) {
       );
     })
   );
+  
+  // Calling claim() to force a "controllerchange" event on navigator.serviceWorker
+  event.waitUntil(self.clients.claim());
+});
+
+self.addEventListener('sync', function(event) {
+
+  if (event.tag == 'refreshCache') {
+    event.waitUntil(function(){
+	  var cacheWhitelist = [CACHE_NAME];
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+  
+  // Calling claim() to force a "controllerchange" event on navigator.serviceWorker
+  event.waitUntil(self.clients.claim());
+	});
+  }
+
 });
