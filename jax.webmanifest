@@ -32,5 +32,13 @@
     "src": "/serviceworker.js",
     "scope": "/",
     "use_cache": true
-  }
+  },
+  "share_target": {
+      "action": "index.html",
+      "params": {
+        "title": "title",
+        "text": "text",
+        "url": "url"
+      }
+    }
 }
